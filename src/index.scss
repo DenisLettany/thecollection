@@ -1,0 +1,51 @@
+@import './assets/scss/media-queries';
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    @include s {
+        flex-direction: column;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    min-height: 40rem;
+    max-height: auto;
+    width: 20%;
+    background-color: white;
+    *:not(img) {
+        max-width: 80%;
+        margin-left: 2rem;
+    }
+    img {
+        height: 33%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .gender {
+        margin-bottom: 1rem;
+        color: gray;
+    }
+    h2 {
+        margin-bottom: 0;
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+    .author {
+        margin-bottom: 1rem;
+        color: gray;
+    }
+    .article-descritpion {
+        margin-bottom: 2rem;
+    }
+    @include s {
+        width: 100%;
+        margin-left: 0;
+    }
+    @include m {
+        width: 26%;
+    }
+}

@@ -1,0 +1,34 @@
+@use 'reset' as *;
+@use 'variables' as *;
+@use 'base' as *;
+@use 'media-queries' as *;
+
+body {
+    min-height: 100vh;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #F5F5F5
+}
+
+header {
+    display: flex;
+    margin-bottom: 6rem;
+    img {
+        border-radius: 90px;
+        height: 10rem;
+        width: 10rem;
+        align-self: center;
+        margin-right: 3rem;
+    }
+    @include s {
+        flex-direction: column;
+        img {
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+}
